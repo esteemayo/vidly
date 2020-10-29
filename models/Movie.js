@@ -6,7 +6,7 @@ const Movie = mongoose.model('Movie', new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        trim: 5,
+        trim: true,
         minlength: 5,
         maxlength: 255
     },

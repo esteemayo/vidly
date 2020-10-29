@@ -1,5 +1,11 @@
 {
   "jwtPrivateKey": "",
   "db": "mongodb://localhost:27017/vidly_node",
-  "port": "3000"
+  "port": "3000",
+  "email_host": "",
+  "email_port": "",
+  "email_username": "",
+  "email_password": "",
+  "email_from": "",
+  "email_to": ""
 }

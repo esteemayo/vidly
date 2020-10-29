@@ -1,3 +1,9 @@
 {
-  "jwtPrivateKey": "vidly_jwtPrivateKey"
+  "jwtPrivateKey": "vidly_jwtPrivateKey",
+  "email_host": "smtp.mailtrap.io",
+  "email_port": "2525",
+  "email_username": "83dfcffc0e933c",
+  "email_password": "527b3d920848e4",
+  "email_from": "support@vidly.com",
+  "email_to":"support@vidly.com"
 }
