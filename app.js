@@ -1,6 +1,9 @@
 const express = require('express');
 const winston = require('winston');
 const config = require('config');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './config.env' });
 
 const app = express();
 

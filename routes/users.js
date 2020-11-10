@@ -5,6 +5,7 @@ const crypto = require('crypto');
 
 const { User, validateUser } = require('../models/User');
 const validate = require('../middleware/validate');
+const sendEmail = require('../utils/email');
 
 const router = express.Router();
 
@@ -35,8 +36,13 @@ router.post('/forgotPassword', async (req, res) => {
         please ignore this email.`;
 
     try {
+        await sendEmail({
+            email: user.email,
+            subject: 'Your password reset token (valid for 10 mins)',
+            message
+        });
         
-        res.status(200).send(message);
+        res.status(200).send('Token sent to email.');
     } catch (err) {
         user.passwordResetToken = undefined;
         user.passwordResetExpires = undefined;
